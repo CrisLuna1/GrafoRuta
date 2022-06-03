@@ -27,9 +27,31 @@ public class inicio {
         g.agregarRuta('D','Q',74);
         g.agregarRuta('D','F',68);
         g.agregarRuta('D','F',14);
-        g.agregarRuta('D','H',14);
-        char inicio = 'C';
-        char fin    = 'A';
+        g.agregarRuta('D','H',18);
+        g.agregarRuta('E','H',21);
+        g.agregarRuta('E','K',7);
+        g.agregarRuta('F','J',31);
+        g.agregarRuta('F','P',8);
+        g.agregarRuta('F','Q',7);
+        g.agregarRuta('G','O',19);
+        g.agregarRuta('G','J',15);
+        g.agregarRuta('H','N',35);
+        g.agregarRuta('H','M',25);
+        g.agregarRuta('H','J',19);
+        g.agregarRuta('H','D',17);
+        g.agregarRuta('H','E',21);
+        g.agregarRuta('H','K',22);
+        g.agregarRuta('I','P',16);
+        g.agregarRuta('J','O',37);
+        g.agregarRuta('J','P',23);
+        g.agregarRuta('J','M',20);
+        g.agregarRuta('K','L',42);
+        g.agregarRuta('M','N',21);
+        g.agregarRuta('P','Q',10);
+
+        
+        char inicio = 'A';
+        char fin    = 'Q';
         String respuesta = g.encontrarRutaMinimaDijkstra(inicio, fin);
         System.out.println(respuesta);
     }

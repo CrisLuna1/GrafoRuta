@@ -14,13 +14,55 @@ public class NameMunicipios {
         String centinela = "";
         switch (tumuni) {
             case 'A':
-                centinela = "Agua_Blanca";
+                centinela = "Agua Blanca";
                 break;
             case 'B':
-                centinela = "Asunsion_Mita";
+                centinela = "Asunsion Mita";
                 break;
             case 'C':
                 centinela = "Atescatempa";
+                break;
+            case 'D':
+                centinela = "Comapa";
+                break;
+            case 'E':
+                centinela = "Conguaco";
+                break;
+            case 'F':
+                centinela = "El Adelanto";
+                break;
+            case 'G':
+                centinela = "El Progreso";
+                break;
+            case 'H':
+                centinela = "Jalpatagua ";
+                break;
+            case 'I':
+                centinela = "Jerez ";
+                break;
+            case 'J':
+                centinela = "Jutiapa ";
+                break;
+            case 'K':
+                centinela = "Moyuta";
+                break;
+            case 'L':
+                centinela = "Pasaco";
+                break;
+            case 'M':
+                centinela = "Quesada";
+                break;
+            case 'N':
+                centinela = "San Jose Acatempa";
+                break;
+            case 'O':
+                centinela = "Santa Catarina Mita";
+                break;
+            case 'P':
+                centinela = "Yupiltepeque";
+                break;
+            case 'Q':
+                centinela = "Zapotitlan";
                 break;
             default:
                 throw new AssertionError();
