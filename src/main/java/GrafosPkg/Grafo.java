@@ -6,7 +6,7 @@
 package GrafosPkg;
 
 import TuMuni.NameMunicipios;
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -19,6 +19,7 @@ import java.util.Stack;
  * @author Ruldin Ayala
  */
 public class Grafo {
+
     char[]  nodos;  // Letras de identificación de nodo
     int [][] grafo;  // Matriz de distancias entre nodos
     String  rutaMasCorta;                           // distancia más corta
@@ -55,8 +56,7 @@ public class Grafo {
         // recupera el nodo final de la lista de terminados
         Nodo tmp = new Nodo(fin);
         if(!listos.contains(tmp)) {
-            System.out.println("Error, nodo no alcanzable");
-            return "Bye";
+            return "        ERROR! repite de nuevo el proceso :D";
         }
         tmp = listos.get(listos.indexOf(tmp));
         int distancia = tmp.distancia;  
@@ -69,7 +69,8 @@ public class Grafo {
         String ruta = "" ;
         // recorre la pila para armar la ruta en el orden correcto
         while(!pila.isEmpty()) ruta+=(pila.pop().id);
-        System.out.print("El recorrido es:\nInicias en ");
+        String cabeza = ("Inicias en ");
+        String imprime = "";
         for (int i = 0; i < ruta.length(); i++) { 
             String mensaje;
             if (i == ruta.length()-2){
@@ -84,9 +85,11 @@ public class Grafo {
                 mensaje = "";
             }
             
-           System.out.print(nuestramuni.nameMuni(ruta.charAt(i)) + mensaje );
+            imprime += nuestramuni.nameMuni(ruta.charAt(i)) + mensaje ;
+           
         }
-          return ", haces unas distancia de: "+ distancia + "Km";
+        
+          return cabeza + imprime + ", haces unas distancia de: "+ distancia + "Km";
     }
 
     // encuentra la ruta más corta desde el nodo inicial a todos los demás

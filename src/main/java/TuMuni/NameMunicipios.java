@@ -9,7 +9,7 @@ package TuMuni;
  * @author Chomin
  */
 public class NameMunicipios {
-    
+    //funcion para que la letra ingresada regrese un nombre de un municipio
     public String nameMuni (char tumuni){
         String centinela = "";
         switch (tumuni) {
@@ -65,25 +65,12 @@ public class NameMunicipios {
                 centinela = "Zapotitlan";
                 break;
             default:
-                throw new AssertionError();
+                throw new AssertionError(); //Por si es otra cosa que no tiene nada que ver con char.... tire este error
                 
         }
         
         
         return centinela;
     } 
-    
-    public String nameMuniInver (String tumuni){
-        String centinela = "";
-        switch (tumuni) {
-            case "a":
-                centinela = "hola";
-                break;
-            default:
-                throw new AssertionError();
-        }
-        
-        return centinela;
-    }
     
 }

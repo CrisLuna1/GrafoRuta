@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.graforuta;
+package Lanzamiento;
 
 import GrafosPkg.Grafo;
+
 
 /**
  *
@@ -13,9 +14,9 @@ import GrafosPkg.Grafo;
  */
 public class inicio {
     
-    public static void main(String[] args) {
-        
-          Grafo g = new Grafo("ABCDEFGHIJKLMNOPQ");
+    
+    public   String InsetarDatos (char partida, char destino){
+        Grafo g = new Grafo("ABCDEFGHIJKLMNOPQ");
         g.agregarRuta('A','O', 17);
         g.agregarRuta('A','B', 28);
         g.agregarRuta('B','O', 18);
@@ -48,11 +49,27 @@ public class inicio {
         g.agregarRuta('K','L',42);
         g.agregarRuta('M','N',21);
         g.agregarRuta('P','Q',10);
-
         
-        char inicio = 'A';
-        char fin    = 'Q';
+        char inicio = partida;
+        char fin    = destino;
         String respuesta = g.encontrarRutaMinimaDijkstra(inicio, fin);
-        System.out.println(respuesta);
+        
+        return respuesta;
     }
+    
+//    public static void main(String[] args) {
+//            Scanner entrada = new Scanner (System.in); 
+//        
+//        char x ,y;
+//        System.out.println("Ingresar la partia: ");
+//        x = entrada.next().charAt(0);
+//        
+//        System.out.println("Ingresar el destino: ");
+//        y = entrada.next().charAt(0);
+//               
+//        System.out.println(InsetarDatos(x,y));
+//        
+//        
+//       
+//    }
 }
